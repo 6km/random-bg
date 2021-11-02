@@ -15,11 +15,5 @@ button.addEventListener('click', () => {
   let color = randomHexColorCode();
   setBgColor(color);
 
-  navigator.clipboard.writeText(color).then(() => {
-    button.textContent = 'Copied'
-
-    setTimeout(() => {
-      button.textContent = 'New color'
-    }, 240)
-  })
+  navigator.clipboard.writeText(color)
 })
